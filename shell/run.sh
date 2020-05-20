@@ -26,4 +26,6 @@ systemctl enable nignx
 systemctl enable php-fpm
 systemctl enable mariadb
 
+systemctl disable aliyun
+
 echo "setup wordpress succ!"
