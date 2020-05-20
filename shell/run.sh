@@ -21,6 +21,7 @@ echo "copy config file..."
 cp ~/wordpress/conf/wp-config.php /etc/wordpress/
 cp ~/wordpress/conf/nginx.conf /etc/nginx/
 chown -R nginx:nginx /usr/share/wordpress
+chown -R nginx:nginx /etc/wordpress
 sed -i "s/apache/nginx/g" /etc/php-fpm.d/www.conf
 
 echo "start server..."
