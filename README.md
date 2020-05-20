@@ -28,21 +28,17 @@ grant all on wpdb.* to 'dayou'@'localhost';
 
 ## start server
 systemctl start nignx
-
 systemctl start php-fpm
-
 systemctl start mariadb
 
 systemctl enable nignx
-
 systemctl enable php-fpm
-
 systemctl enable mariadb
 
 
 ## shortly, you can
-git clone git@github.com:shandong115/wordpress.git
-
-bash wordpress/shell/run.sh
+yum install -y git
+git clone https://github.com/shandong115/wordpress.git
+bash wordpress/shell/run.sh > setup.txt
 
 骚年，放飞自我吧！--->[点这里](http://zhaolixing.com)
