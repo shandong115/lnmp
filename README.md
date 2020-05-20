@@ -7,13 +7,13 @@ LNMP envirionment, Centos7 OS <br>
 yum install -y nginx
 
 ### setup db
-yum install -y mariadb mariadb-server
+yum install -y mariadb mariadb-server wordpress
 
 ### setup php
 yum install -y php php-fpm php-mysql
 
 ### shortly, you can
-yum install -y nginx php php-fpm php-mysql mariadb mariadb-server
+yum install -y nginx php php-fpm php-mysql mariadb mariadb-server wordpress
 
 ## create db,user
 
@@ -25,11 +25,11 @@ grant all on wpdb.* to 'dayou'@'localhost';
 
 ## start server
 
-systemctl start nignx <br>
+systemctl start nginx <br>
 systemctl start php-fpm <br>
 systemctl start mariadb <br>
 
-systemctl enable nignx <br>
+systemctl enable nginx <br>
 systemctl enable php-fpm <br>
 systemctl enable mariadb
 

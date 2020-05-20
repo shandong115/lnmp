@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "setup nginx php php-fpm php-mysql mariadb mariadb-server start ..."
-yum install -y nginx php php-fpm php-mysql mariadb mariadb-server
-echo "setup nginx php php-fpm php-mysql mariadb mariadb-server over"
+echo "setup nginx php php-fpm php-mysql mariadb mariadb-server wordpress start ..."
+yum install -y nginx php php-fpm php-mysql mariadb mariadb-server wordpress
+echo "setup nginx php php-fpm php-mysql mariadb mariadb-server wordpress over"
 
 echo "create db user..."
 systemctl start mariadb
@@ -19,10 +19,10 @@ cp ~/wordpress/conf/wp-config.php /etc/wordpress/
 cp ~/wordpress/conf/nginx.conf /etc/nginx/
 
 echo "start server..."
-systemctl start nignx
+systemctl start nginx
 systemctl start php-fpm
 
-systemctl enable nignx
+systemctl enable nginx
 systemctl enable php-fpm
 systemctl enable mariadb
 
