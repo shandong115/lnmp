@@ -16,7 +16,7 @@ yum install -y php php-fpm php-mysql
 yum install -y nginx php php-fpm php-mysql mariadb mariadb-server
 
 ## create db,user
-mysqladmin -uroot -pasdasd321321 create wpdb 
+mysqladmin -uroot -pasdasd321321 create wpdb
 mysql -u root -p
 create database wpdb;
 create user 'dayou'@'localhost' identified by 'asdasd321321';
